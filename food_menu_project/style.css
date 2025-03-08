@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 3rem;
+    font-family: "Roboto", serif;
+    text-align: center;
+    font-size: 2rem;
+}
+nav {
+    border: .5rem solid #333;
+    border-radius: 5rem;
+    margin: 0 auto 1rem;
+    /* top,left&right,bottom */
+    width: 40%;
+    /* width of boarder according to content*/
+    line-height: 6rem;
+
+}
+
+li {
+    list-style-type: none;
+    border-top: 0.3rem solid#df658e;
+   
+}
+
+h2 {
+    padding: 0.4rem;
+    background-color: hsl(248, 53%, 58%);
+    border-radius: 4.5rem 4.5rem 0 0;
+    /* in rectangle as clockwise top-left,top-right,bottom-right,bottom-left */
+}
+li a,
+li:visited{
+    color: purple;
+    text-decoration:none;
+}
+
+li a:focus,
+li a:hover{
+    background: #333;
+    color: rgb(83, 179, 179);
+    cursor: pointer;
+}
+li a{
+    display: block;
+}
+li:last-child a{
+    border-radius: 0 0 4.5rem 4.5rem;
+}

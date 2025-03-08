@@ -1,0 +1,13 @@
+table {
+    border: 35px solid hsl(16, 100%, 70%);
+    border-radius: 20px;
+}
+table {
+    color: orange;
+    background-color: orangered;
+}
+p {
+    width: 30%;
+    color: black;
+    background-color: aqua;
+}
