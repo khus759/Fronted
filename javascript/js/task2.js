@@ -10,7 +10,7 @@ for (let i = range1; i <= range2; i++) {
     let isPrime = true;
 
     if (i <= 1) {
-        isPrime = false; // 0 and 1 are not prime
+        isPrime = false; 
     } else {
         for (let j = 2; j < i; j++) {
             if (i % j === 0) {
