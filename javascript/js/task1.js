@@ -6,13 +6,13 @@ let num2 = Number(prompt("Please enter the second number:"));
 for (let i = num1; i<=num2; i++) {
     
     if ((i % 4 === 0 && i % 6 === 0)) {
-        console.log("Quad")
+        console.log("QuadHex")
     }
     else if (i % 4 === 0){
-        console.log("Hex");
+        console.log("Quad");
     }
     else if (i % 6 === 0){
-        console.log("QuadHex");
+        console.log("Hex");
     }
     else {
         console.log(`${i}`)
