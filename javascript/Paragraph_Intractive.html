@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph interactive</title>
+    <style>
+        .highlight {background: yellow;}
+        p { font-size: 1.2rem;}
+    </style>
+</head>
+
+<body>
+    <div id="textContainer">
+        <p data-count="0">This is paragraph 1</p>
+        <p data-count="0">This is paragraph 2</p>
+        <p data-count="0">This is paragraph 3</p>
+        <p data-count="0">This is paragraph 4 </p>
+        <p data-count="0">This is paragraph 5</p>
+    </div>
+
+    <script>
+        document.getElementById('textContainer').onclick = e => {
+            if (e.target.tagName !== 'P') return;
+
+            const p = e.target;
+            p.classList.toggle('highlight');
+
+            if (p.classList.contains('highlight')) {
+                p.dataset.count = +p.dataset.count + 1;
+            }
+
+            p.textContent = p.textContent.split(' (Clicked')[0] +
+                (p.classList.contains('highlight') ? ` (Clicked ${p.dataset.count} times)` : '');
+        };
+    </script>
+</body>
+
+</html>
