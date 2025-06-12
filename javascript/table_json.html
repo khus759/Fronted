@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table_json</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>name</td>
+                <td>email</td>
+                <td>company</td>
+                <td>address</td>
+                <td>website</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(users => {
+                const tableBody = document.querySelector('tbody');
+
+                users.forEach(user => {
+                    const row = document.createElement('tr');
+
+
+                    const fullAddress = `${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}`;
+
+
+                    row.innerHTML = `
+        <td>${user.name}</td>
+        <td>${user.email}</td>
+        <td>${user.company.name}</td>
+        <td>${fullAddress}</td>
+        <td>${user.website}</td>
+      `;
+
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+
+
+    </script>
+</body>
+
+</html>
